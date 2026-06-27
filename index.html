@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhuvaneshwaran V | Senior Power BI Developer & BI Consultant</title>
+  <meta name="description" content="Senior Power BI Developer portfolio of Bhuvaneshwaran V. 3+ years experience engineering data models, DAX structures, and report optimizations.">
+  
+  <!-- Tailwind CSS CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font setup -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Configure custom Tailwind theme values -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            primary: '#3b82f6',
+            darkBg: '#09090b',
+            darkCard: '#18181b',
+            lightBg: '#f8fafc',
+            lightCard: '#ffffff'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium Glassmorphic styles */
+    .glass {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .dark .glass {
+      background: rgba(24, 24, 27, 0.4);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Grid Background Pattern */
+    .grid-bg {
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .dark .grid-bg {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Custom scroll progress indicator */
+    #progress-bar {
+      transition: width 0.1s ease-out;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="dark font-sans bg-lightBg dark:bg-darkBg text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+
+  <!-- Scroll Progress -->
+  <div class="fixed top-0 left-0 w-full z-50 h-1 bg-zinc-200 dark:bg-zinc-800">
+    <div id="progress-bar" class="h-full bg-primary w-0"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <nav class="fixed top-1 left-0 w-full z-40 px-4 py-2">
+    <div class="max-w-7xl mx-auto px-6 h-14 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex items-center justify-between shadow-lg">
+      <div class="flex items-center gap-2">
+        <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <span class="font-bold tracking-tight text-sm">Bhuvaneshwaran V</span>
+        <span class="hidden sm:inline-block px-2 py-0.5 text-[9px] font-bold border border-primary/20 rounded-full bg-primary/5 text-primary uppercase">BI ENGINEER</span>
+      </div>
+
+      <!-- Links -->
+      <div class="hidden md:flex items-center gap-6 text-xs font-semibold">
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+        <a href="#dax" class="hover:text-primary transition-colors">DAX Library</a>
+        <a href="#performance" class="hover:text-primary transition-colors">Performance</a>
+        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+      </div>
+
+      <!-- Theme Switcher & Actions -->
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" class="p-2 rounded-lg bg-zinc-200/50 dark:bg-zinc-800/50 hover:opacity-80 transition-opacity">
+          <!-- Moon Icon -->
+          <svg id="moon-icon" class="h-4 w-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <!-- Sun Icon -->
+          <svg id="sun-icon" class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="#resume" class="px-4 py-2 rounded-lg bg-primary text-white text-xs font-bold hover:opacity-90 shadow-md transition-opacity">Resume PDF</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-16 px-4 md:px-8 grid-bg">
+    <div class="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-8 z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold border border-primary/20 rounded-full bg-primary/5 text-primary">
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>Senior BI Developer</span>
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+        Engineering Decisions Through
+        <br>
+        <span id="typing-text" class="text-primary mt-2 inline-block">Enterprise Business Intelligence</span>
+      </h1>
+
+      <p class="text-base md:text-lg text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        Enterprise BI Developer with 3+ years of expertise building high-performance, interactive analytical solutions. Specialized in transforming raw business data into actionable corporate intelligence using Power BI, DAX, Power Query, and Star Schema modeling.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-primary text-white font-bold hover:opacity-95 shadow-lg shadow-primary/20 transition-all text-xs">View Case Studies</a>
+        <a href="#resume" class="px-6 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-bold transition-all text-xs">Download Resume</a>
+        <a href="#contact" class="px-6 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-bold transition-all text-xs">Contact Me</a>
+      </div>
+
+      <!-- Hero KPIs -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl mt-16 pt-12 border-t border-zinc-200/40 dark:border-zinc-800/40 text-left">
+        <div class="p-5 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 shadow-sm">
+          <div class="text-3xl font-extrabold text-primary mb-1">3+</div>
+          <div class="text-xs font-bold">Years Experience</div>
+          <div class="text-[10px] text-zinc-400 mt-1 leading-relaxed">In Enterprise Business Intelligence</div>
+        </div>
+        <div class="p-5 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 shadow-sm">
+          <div class="text-3xl font-extrabold text-primary mb-1">3</div>
+          <div class="text-xs font-bold">Enterprise Projects</div>
+          <div class="text-[10px] text-zinc-400 mt-1 leading-relaxed">Insurance, Healthcare & Retail</div>
+        </div>
+        <div class="p-5 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 shadow-sm">
+          <div class="text-3xl font-extrabold text-primary mb-1">100+</div>
+          <div class="text-xs font-bold">DAX Measures</div>
+          <div class="text-[10px] text-zinc-400 mt-1 leading-relaxed">For complex financial logic</div>
+        </div>
+        <div class="p-5 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 shadow-sm">
+          <div class="text-3xl font-extrabold text-primary mb-1">40%</div>
+          <div class="text-xs font-bold">Performance Uplift</div>
+          <div class="text-[10px] text-zinc-400 mt-1 leading-relaxed">Via DAX & schema optimization</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 border-y border-zinc-200/40 dark:border-zinc-800/40 bg-zinc-100/50 dark:bg-zinc-900/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-primary">About Me</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Consultative Analytical Mindset</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">I engineer corporate reporting systems that solve operational blockages. My experience spans highly audited sectors requiring security and loading speeds.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Summary & Strengths -->
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <h4 class="text-lg font-bold">Executive Profile</h4>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+              Leveraging data modeling, performance optimization, and custom DAX calculations to empower executive decision-making. Proven track record in Insurance, Healthcare, and Retail sectors delivering 40%+ report load speedups.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="text-lg font-bold">Competency Highlights</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-600 dark:text-zinc-400">
+              <div class="flex items-center gap-2"><svg class="h-4 w-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3"/></svg> Star Schema design</div>
+              <div class="flex items-center gap-2"><svg class="h-4 w-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3"/></svg> Query optimization</div>
+              <div class="flex items-center gap-2"><svg class="h-4 w-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3"/></svg> Dynamic security roles (RLS)</div>
+              <div class="flex items-center gap-2"><svg class="h-4 w-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3"/></svg> M-script pipelines</div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h4 class="text-lg font-bold">Focus Industries</h4>
+            <div class="space-y-3">
+              <div class="p-4 rounded-xl border border-zinc-200/40 dark:border-zinc-800/40 bg-white/40 dark:bg-zinc-900/40 flex items-start gap-3">
+                <svg class="h-5 w-5 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <div>
+                  <div class="text-xs font-bold">Insurance Underwriting</div>
+                  <p class="text-[10px] text-zinc-400 mt-0.5">Calculated Loss Ratio, Earned Premiums, and Adjuster lifecycle metrics across multiple regions.</p>
+                </div>
+              </div>
+              <div class="p-4 rounded-xl border border-zinc-200/40 dark:border-zinc-800/40 bg-white/40 dark:bg-zinc-900/40 flex items-start gap-3">
+                <svg class="h-5 w-5 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <div>
+                  <div class="text-xs font-bold">Clinical Healthcare (HIPAA)</div>
+                  <p class="text-[10px] text-zinc-400 mt-0.5">Telemetry logging, compliance alarms, EMR synchronization, and strict row-level security role filters.</p>
+                </div>
+              </div>
+              <div class="p-4 rounded-xl border border-zinc-200/40 dark:border-zinc-800/40 bg-white/40 dark:bg-zinc-900/40 flex items-start gap-3">
+                <svg class="h-5 w-5 text-primary shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                <div>
+                  <div class="text-xs font-bold">Shopify Retail & inventory</div>
+                  <p class="text-[10px] text-zinc-400 mt-0.5">Shopify API extraction, gross profit margins, inventory turnover, and sales-to-target evaluation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Career Timeline -->
+        <div class="space-y-6">
+          <h4 class="text-lg font-bold">Career Timeline</h4>
+          <div class="relative border-l border-zinc-200 dark:border-zinc-800 pl-6 space-y-8">
+            <div class="relative space-y-1.5">
+              <div class="absolute -left-[31px] top-1.5 w-4.5 h-4.5 rounded-full border-4 border-lightBg dark:border-darkBg bg-primary ring-2 ring-primary/20"></div>
+              <div class="flex justify-between items-center text-[10px] text-zinc-400 font-mono">
+                <span class="px-2 py-0.5 bg-primary/10 border border-primary/20 text-primary font-bold rounded">2024 - PRESENT</span>
+                <span>Enterprise BI Solutions</span>
+              </div>
+              <h5 class="text-xs font-bold">Senior BI & Analytics Consultant</h5>
+              <p class="text-[11px] text-zinc-500 leading-relaxed">Contracting for insurance and retail networks to structure standard reporting dashboards.</p>
+            </div>
+            <div class="relative space-y-1.5">
+              <div class="absolute -left-[31px] top-1.5 w-4.5 h-4.5 rounded-full border-4 border-lightBg dark:border-darkBg bg-primary ring-2 ring-primary/20"></div>
+              <div class="flex justify-between items-center text-[10px] text-zinc-400 font-mono">
+                <span class="px-2 py-0.5 bg-primary/10 border border-primary/20 text-primary font-bold rounded">2023 - 2024</span>
+                <span>RPM Health Solutions</span>
+              </div>
+              <h5 class="text-xs font-bold">Power BI Developer & Data Engineer</h5>
+              <p class="text-[11px] text-zinc-500 leading-relaxed">Ingested vitals telemetry streams, passing compliance security and gateway speed configurations.</p>
+            </div>
+            <div class="relative space-y-1.5">
+              <div class="absolute -left-[31px] top-1.5 w-4.5 h-4.5 rounded-full border-4 border-lightBg dark:border-darkBg bg-primary ring-2 ring-primary/20"></div>
+              <div class="flex justify-between items-center text-[10px] text-zinc-400 font-mono">
+                <span class="px-2 py-0.5 bg-primary/10 border border-primary/20 text-primary font-bold rounded">2022 - 2023</span>
+                <span>Retail Metrics Inc.</span>
+              </div>
+              <h5 class="text-xs font-bold">Junior BI Analyst</h5>
+              <p class="text-[11px] text-zinc-500 leading-relaxed">Wrote Power Query M-scripts, flattening layout budget spreadsheets for unified dimensions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-primary">Capabilities</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Structured Technical Capabilities</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Technical skills mapped according to query extraction, modeling, security, and visualization.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between hover:border-primary/20 transition-all group">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+              <h4 class="font-bold text-sm">Business Intelligence</h4>
+            </div>
+            <div class="space-y-4 text-xs">
+              <div>
+                <div class="flex justify-between font-bold mb-1"><span>Power BI Desktop / Service</span><span>5/5</span></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 rounded overflow-hidden"><div class="h-full bg-primary" style="width: 100%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-bold mb-1"><span>Report Builder (Paginated)</span><span>4/5</span></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 rounded overflow-hidden"><div class="h-full bg-primary" style="width: 80%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between hover:border-primary/20 transition-all group">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>
+              <h4 class="font-bold text-sm">Data Modeling</h4>
+            </div>
+            <div class="space-y-4 text-xs">
+              <div>
+                <div class="flex justify-between font-bold mb-1"><span>Star Schema Design</span><span>5/5</span></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 rounded overflow-hidden"><div class="h-full bg-primary" style="width: 100%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-bold mb-1"><span>DAX Expressions</span><span>5/5</span></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 rounded overflow-hidden"><div class="h-full bg-primary" style="width: 100%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between hover:border-primary/20 transition-all group">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <svg class="h-5 w-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17L10 11 4 5M12 19h10"/></svg>
+              <h4 class="font-bold text-sm">ETL & SQL Processing</h4>
+            </div>
+            <div class="space-y-4 text-xs">
+              <div>
+                <div class="flex justify-between font-bold mb-1"><span>Power Query (M)</span><span>5/5</span></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 rounded overflow-hidden"><div class="h-full bg-primary" style="width: 100%;"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between font-bold mb-1"><span>Oracle SQL / T-SQL</span><span>4/5</span></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 rounded overflow-hidden"><div class="h-full bg-primary" style="width: 80%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Case Studies) -->
+  <section id="projects" class="py-24 border-y border-zinc-200/40 dark:border-zinc-800/40 bg-zinc-100/50 dark:bg-zinc-900/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-primary">Case Studies</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Enterprise BI Projects</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Click to explore the detailed consulting documentation including business impact and DAX calculations.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between hover:border-primary/20 transition-all group">
+          <div>
+            <div class="flex justify-between text-[10px] text-zinc-400 font-mono mb-4">
+              <span>INSURANCE</span>
+              <span>12 MONTHS</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">Mercury General Claims</h4>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">Designed auto underwriting dashboard system tracking loss ratios, claim lifecycles, and regional performance matrices.</p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Oracle SQL</span>
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Power Query</span>
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Dynamic RLS</span>
+            </div>
+          </div>
+          <button onclick="openModal('mercury')" class="w-full py-2.5 rounded-xl bg-primary text-white text-xs font-bold hover:opacity-90 transition-opacity">Explore Case Study</button>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between hover:border-primary/20 transition-all group">
+          <div>
+            <div class="flex justify-between text-[10px] text-zinc-400 font-mono mb-4">
+              <span>HEALTHCARE</span>
+              <span>10 MONTHS</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">RPM Clinical Vitals</h4>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">HIPAA compliant patient telemetry tracking dashboard integrating EMR registries and device alert monitoring logs.</p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Web API JSON</span>
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Azure SQL</span>
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Incremental Refresh</span>
+            </div>
+          </div>
+          <button onclick="openModal('rpm')" class="w-full py-2.5 rounded-xl bg-primary text-white text-xs font-bold hover:opacity-90 transition-opacity">Explore Case Study</button>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between hover:border-primary/20 transition-all group">
+          <div>
+            <div class="flex justify-between text-[10px] text-zinc-400 font-mono mb-4">
+              <span>RETAIL</span>
+              <span>8 MONTHS</span>
+            </div>
+            <h4 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">Arhaus Sales Performance</h4>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">Multi-channel retail analysis evaluating showroom actual sales against monthly target quotas and inventory turnover.</p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Shopify API</span>
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">SQL Server</span>
+              <span class="text-[9px] font-mono border border-zinc-200/45 dark:border-zinc-800/45 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Excel targets</span>
+            </div>
+          </div>
+          <button onclick="openModal('arhaus')" class="w-full py-2.5 rounded-xl bg-primary text-white text-xs font-bold hover:opacity-90 transition-opacity">Explore Case Study</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAX Showcase Library -->
+  <section id="dax" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-primary">DAX Code Repository</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Time Intelligence & Aggregations</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Search my custom DAX calculated measures and logical columns catalog.</p>
+      </div>
+
+      <!-- Search Box -->
+      <div class="max-w-md mx-auto mb-10 relative">
+        <input 
+          id="dax-search"
+          type="text" 
+          placeholder="Search formulas (e.g. loss ratio, retention)..."
+          class="w-full pl-4 pr-10 py-3 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-white dark:bg-zinc-900/50 text-xs focus:outline-none focus:border-primary"
+        >
+      </div>
+
+      <!-- Dax Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="dax-container">
+        <!-- Dax Item 1 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 space-y-4 dax-card">
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-sm text-foreground dax-title">Dynamic Currency Conversion</h4>
+            <button onclick="copyText(this)" class="text-zinc-400 hover:text-primary transition-colors text-[10px] font-bold">Copy</button>
+          </div>
+          <p class="text-[11px] text-zinc-400"><span class="text-zinc-100 font-bold">Objective:</span> Multi-currency conversions on sales indicators via slicer rates.</p>
+          <pre class="font-mono text-[10px] bg-zinc-950 text-zinc-100 p-3 rounded-lg overflow-x-auto border border-zinc-800/80 leading-relaxed dax-code">
+Converted Sales = 
+VAR SelectedRate = 
+  SELECTEDVALUE(Dim_ExchangeRates[Rate], 1)
+RETURN 
+  SUM(Fact_Sales[SalesAmount]) * SelectedRate
+          </pre>
+          <div class="text-[10px] text-zinc-400 p-2.5 rounded bg-zinc-100/20 dark:bg-zinc-800/20 border border-zinc-800/40 leading-relaxed">
+            <span class="font-bold text-foreground">Logic:</span> Evaluates currency slicer context, returning exchange rate multipliers.
+          </div>
+        </div>
+
+        <!-- Dax Item 2 -->
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 space-y-4 dax-card">
+          <div class="flex justify-between items-center">
+            <h4 class="font-bold text-sm text-foreground dax-title">30 Day Moving Average</h4>
+            <button onclick="copyText(this)" class="text-zinc-400 hover:text-primary transition-colors text-[10px] font-bold">Copy</button>
+          </div>
+          <p class="text-[11px] text-zinc-400"><span class="text-zinc-100 font-bold">Objective:</span> Smooth fluctuation variations representing daily sales flow.</p>
+          <pre class="font-mono text-[10px] bg-zinc-950 text-zinc-100 p-3 rounded-lg overflow-x-auto border border-zinc-800/80 leading-relaxed dax-code">
+Sales 30D Moving Avg = 
+AVERAGEX(
+  DATESINPERIOD(
+    Dim_Dates[Date],
+    LASTDATE(Dim_Dates[Date]),
+    -30,
+    DAY
+  ),
+  [Total Sales]
+)
+          </pre>
+          <div class="text-[10px] text-zinc-400 p-2.5 rounded bg-zinc-100/20 dark:bg-zinc-800/20 border border-zinc-800/40 leading-relaxed">
+            <span class="font-bold text-foreground">Logic:</span> Calculates 30-day window averages shifting current date constraints.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Performance Optimization Section -->
+  <section id="performance" class="py-24 border-y border-zinc-200/40 dark:border-zinc-800/40 bg-zinc-100/50 dark:bg-zinc-900/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-primary">Performance</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Model Compression Stats</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Measurable query and refresh improvements using DAX Studio and star schema optimizations.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 relative">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-emerald-500"></div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-zinc-400 mb-4">DirectQuery Database Overhead</h4>
+          <div class="flex justify-between items-center border border-zinc-800/40 p-4 rounded-xl bg-zinc-900/40 font-mono mb-4 text-xs">
+            <div><span class="text-red-500 line-through">15.4s</span></div>
+            <div>&rarr;</div>
+            <div><span class="text-emerald-500">1.2s</span></div>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">Replaced slow relational links with memory-optimized import schemas loaded onto the local VertiPaq database engine.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 relative">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-emerald-500"></div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-zinc-400 mb-4">DAX Evaluation Time</h4>
+          <div class="flex justify-between items-center border border-zinc-800/40 p-4 rounded-xl bg-zinc-900/40 font-mono mb-4 text-xs">
+            <div><span class="text-red-500 line-through">4.8s</span></div>
+            <div>&rarr;</div>
+            <div><span class="text-emerald-500">0.4s</span></div>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">Refactored slow filter loops using VAR variables and clean table variables to bypass dynamic context scanning.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 relative">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-emerald-500"></div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-zinc-400 mb-4">Scheduled Refresh Interval</h4>
+          <div class="flex justify-between items-center border border-zinc-800/40 p-4 rounded-xl bg-zinc-900/40 font-mono mb-4 text-xs">
+            <div><span class="text-red-500 line-through">45m</span></div>
+            <div>&rarr;</div>
+            <div><span class="text-emerald-500">3m</span></div>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed">Configured Incremental Refresh on transaction tables utilizing datetime M-parameters on database pipelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-primary">Resume</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Credentials Portfolio</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">View or download the professional curriculum vitae summary.</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between">
+          <div class="space-y-4">
+            <h4 class="font-bold text-sm">BI Profile Summary</h4>
+            <p class="text-[11px] text-zinc-400 leading-relaxed">Contains history logs, corporate client references, technical metrics, and certification badges.</p>
+            <div class="space-y-1.5 text-xs text-zinc-400 font-semibold">
+              <div>Location: Chennai, India</div>
+              <div>Availability: Immediate Contract</div>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-zinc-800/40 space-y-3">
+            <a href="resume.pdf" download class="w-full block text-center py-2.5 rounded-xl bg-primary text-white text-xs font-bold hover:opacity-90 shadow-md">Download PDF</a>
+            <a href="resume.pdf" target="_blank" class="w-full block text-center py-2.5 rounded-xl border border-zinc-800 bg-zinc-900/30 text-xs font-semibold hover:bg-zinc-800 text-zinc-300">Open In Tab</a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 rounded-2xl border border-zinc-200/40 dark:border-zinc-800/40 bg-zinc-950/40 overflow-hidden h-[450px]">
+          <!-- Fallback mockup if pdf doesn't embed -->
+          <iframe src="resume.pdf" class="w-full h-full border-none" type="application/pdf">
+            <div class="p-12 text-center text-xs">PDF Viewer not supported. Please click download link.</div>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 border-t border-zinc-200/40 dark:border-zinc-800/40 bg-zinc-100/50 dark:bg-zinc-900/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-primary">Inquiry</h2>
+        <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">Initiate Consulting Discussion</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Get in touch via dynamic quick buttons or the contact form.</p>
+      </div>
+
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 items-stretch">
+        <!-- Direct Details -->
+        <div class="md:col-span-2 p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between">
+          <div class="space-y-6">
+            <h4 class="font-bold text-sm">Direct Channels</h4>
+            <div class="space-y-4 text-xs">
+              <a href="mailto:bhuvanesh.bi.developer@gmail.com?subject=Contract%20Inquiry" class="flex items-center gap-3 p-3 rounded-xl border border-zinc-800 bg-zinc-900/30 text-zinc-300 hover:text-white transition-colors">
+                <svg class="h-4 w-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                <span>bhuvanesh.bi.developer@gmail.com</span>
+              </a>
+              <a href="https://wa.me/919876543210?text=Hello%20Bhuvaneshwaran,%20I%20visited%20your%20Power%20BI%20portfolio..." target="_blank" class="flex items-center gap-3 p-3 rounded-xl border border-zinc-800 bg-zinc-900/30 text-zinc-300 hover:text-white transition-colors">
+                <svg class="h-4 w-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>WhatsApp Prefilled Chat</span>
+              </a>
+              <a href="tel:+919876543210" class="flex items-center gap-3 p-3 rounded-xl border border-zinc-800 bg-zinc-900/30 text-zinc-300 hover:text-white transition-colors">
+                <svg class="h-4 w-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+91 98765 43210</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-zinc-800/40">
+            <span class="text-[10px] uppercase font-bold text-zinc-400 block mb-3">Links</span>
+            <div class="flex gap-4 text-xs font-semibold text-zinc-400">
+              <a href="https://linkedin.com/in/bhuvaneshwaran-v" target="_blank" class="hover:text-primary">LinkedIn</a>
+              <a href="https://github.com/bhuvanesh-bi" target="_blank" class="hover:text-primary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="md:col-span-3 p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40">
+          <form onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-1">
+                <label class="font-bold">Name</label>
+                <input type="text" required placeholder="John Doe" class="w-full p-3 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-white dark:bg-zinc-900 focus:outline-none focus:border-primary text-foreground">
+              </div>
+              <div class="space-y-1">
+                <label class="font-bold">Email</label>
+                <input type="email" required placeholder="john@company.com" class="w-full p-3 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-white dark:bg-zinc-900 focus:outline-none focus:border-primary text-foreground">
+              </div>
+            </div>
+            <div class="space-y-1">
+              <label class="font-bold">Message</label>
+              <textarea rows="4" required placeholder="Describe your contract context or metrics targets..." class="w-full p-3 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 bg-white dark:bg-zinc-900 focus:outline-none focus:border-primary text-foreground resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-primary text-white font-bold hover:opacity-90 shadow-md">Send Message Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-200/40 dark:border-zinc-800/40 py-12 text-xs text-zinc-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>&copy; 2026 Bhuvaneshwaran V. All rights reserved.</div>
+      <div class="font-bold tracking-tight text-primary">Power BI Enterprise Portfolio</div>
+    </div>
+  </footer>
+
+  <!-- DYNAMIC PROJECT MODAL (15-SECTION CASE STUDY) -->
+  <div id="project-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
+    <div class="bg-lightCard dark:bg-darkCard border border-zinc-200/40 dark:border-zinc-800/40 rounded-2xl max-w-4xl w-full h-[90vh] flex flex-col justify-between overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-zinc-200/40 dark:border-zinc-800/40 flex justify-between items-center">
+        <div>
+          <span id="modal-industry" class="text-[9px] font-mono text-primary font-bold uppercase border border-primary/20 bg-primary/5 px-2.5 py-0.5 rounded">Category</span>
+          <h4 id="modal-title" class="text-lg font-bold mt-2">Project Case Study</h4>
+        </div>
+        <button onclick="closeModal()" class="p-2 rounded-lg bg-zinc-200/40 dark:bg-zinc-800/40 hover:opacity-85 text-foreground font-bold">&times;</button>
+      </div>
+
+      <!-- Modal Body (Scrollable 15-Section layout) -->
+      <div class="p-8 flex-1 overflow-y-auto space-y-8 text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+        
+        <!-- Tab menu inside modal -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 text-center font-bold">
+          <a href="#modal-sec-exec" class="p-2 rounded bg-zinc-100 dark:bg-zinc-900 border border-zinc-800/40 text-foreground">Summary</a>
+          <a href="#modal-sec-etl" class="p-2 rounded bg-zinc-100 dark:bg-zinc-900 border border-zinc-800/40 text-foreground">ETL & Data</a>
+          <a href="#modal-sec-dax" class="p-2 rounded bg-zinc-100 dark:bg-zinc-900 border border-zinc-800/40 text-foreground">DAX measures</a>
+          <a href="#modal-sec-impact" class="p-2 rounded bg-zinc-100 dark:bg-zinc-900 border border-zinc-800/40 text-foreground">Impact & Lessons</a>
+        </div>
+
+        <section id="modal-sec-exec" class="space-y-4">
+          <h5 class="text-sm font-bold text-foreground border-b border-zinc-800 pb-1">1. Executive Summary & Problem</h5>
+          <p id="modal-summary">Summary text here...</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-850">
+              <span class="font-bold text-foreground block mb-1">Business Problem</span>
+              <p id="modal-problem">Problem here...</p>
+            </div>
+            <div class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-850">
+              <span class="font-bold text-foreground block mb-1">Requirements</span>
+              <ul id="modal-reqs" class="list-disc pl-4 space-y-1"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="modal-sec-etl" class="space-y-4">
+          <h5 class="text-sm font-bold text-foreground border-b border-zinc-800 pb-1">2. Data Pipeline, Sources & ETL</h5>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <span class="font-bold text-foreground block mb-1">Data Sources Ingested</span>
+              <div id="modal-sources" class="flex flex-wrap gap-2 pt-1"></div>
+            </div>
+            <div>
+              <span class="font-bold text-foreground block mb-1">Architecture</span>
+              <p id="modal-architecture">Architecture here...</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <span class="font-bold text-foreground block">Power Query ETL Transformation Pipeline</span>
+            <div id="modal-etl-steps" class="space-y-2"></div>
+          </div>
+          <div class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-850">
+            <span class="font-bold text-foreground block mb-1">Data Model Schema</span>
+            <p id="modal-schema">Schema here...</p>
+          </div>
+        </section>
+
+        <section id="modal-sec-dax" class="space-y-4">
+          <h5 class="text-sm font-bold text-foreground border-b border-zinc-800 pb-1">3. Calculated Expressions (DAX)</h5>
+          <div id="modal-dax-measures" class="space-y-4"></div>
+        </section>
+
+        <section id="modal-sec-impact" class="space-y-4">
+          <h5 class="text-sm font-bold text-foreground border-b border-zinc-800 pb-1">4. Optimization, Outcomes & Business Value</h5>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-850">
+              <span class="font-bold text-foreground block mb-1">Optimization Steps</span>
+              <ul id="modal-opt" class="list-disc pl-4 space-y-1"></ul>
+            </div>
+            <div class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-850">
+              <span class="font-bold text-foreground block mb-1">Business Impact</span>
+              <ul id="modal-impact" class="list-disc pl-4 space-y-1"></ul>
+            </div>
+            <div class="p-4 bg-zinc-900/40 rounded-xl border border-zinc-850">
+              <span class="font-bold text-foreground block mb-1">Lessons Learned</span>
+              <ul id="modal-lessons" class="list-disc pl-4 space-y-1"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-zinc-200/40 dark:border-zinc-800/40 bg-zinc-100/20 dark:bg-zinc-900/20 text-right">
+        <button onclick="closeModal()" class="px-6 py-2 rounded-xl bg-primary text-white text-xs font-bold hover:opacity-90">Close Documentation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Theme Switcher Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    // Scroll Progress
+    window.addEventListener('scroll', () => {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / scrollHeight) * 100;
+      document.getElementById('progress-bar').style.width = `${progress}%`;
+    });
+
+    // Animated Typing text variables
+    const phrases = [
+      "Enterprise Business Intelligence",
+      "High-Performance DAX Architectures",
+      "Optimized Star Schema Models",
+      "Interactive Analytical Dashboards"
+    ];
+    let phraseIdx = 0;
+    setInterval(() => {
+      phraseIdx = (phraseIdx + 1) % phrases.length;
+      document.getElementById('typing-text').textContent = phrases[phraseIdx];
+    }, 3000);
+
+    // DAX Search Filter
+    const daxSearch = document.getElementById('dax-search');
+    daxSearch.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll('.dax-card');
+      cards.forEach(card => {
+        const title = card.querySelector('.dax-title').textContent.toLowerCase();
+        const code = card.querySelector('.dax-code').textContent.toLowerCase();
+        if (title.includes(query) || code.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Copy to clipboard helper
+    function copyText(button) {
+      const pre = button.parentElement.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent.trim());
+      const originalText = button.textContent;
+      button.textContent = 'Copied!';
+      button.style.color = '#10b981';
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.style.color = '';
+      }, 2000);
+    }
+
+    // Contact Form Action Message
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Consulting request successfully initialized! Response will be returned in 24 business hours.');
+      e.target.reset();
+    }
+
+    // Dynamic case studies object database
+    const caseStudiesData = {
+      mercury: {
+        title: "Mercury General Claims Analytics",
+        industry: "Insurance",
+        summary: "Developed a comprehensive enterprise Claims & Underwriting Intelligence dashboard system tracking loss ratios, claim lifecycles, and policy performance across 10+ states.",
+        problem: "Sluggish queries hitting legacy transactional Oracle servers took monthly report closes up to 5 days, resulting in lag values for underwriting executives.",
+        reqs: [
+          "Consolidate underwriting and policy log streams.",
+          "Perform Loss Ratio and YTD Earned Premium aggregations on the fly.",
+          "Dynamic state geographical drills.",
+          "Secure policyholder data using dynamic RLS roles."
+        ],
+        sources: ["Oracle SQL DB", "SharePoint Adjuster Lists", "Adjustments CSV"],
+        architecture: "Data loaded from Oracle SQL views, transformed in Power Query enforcing strict folding, pushed to VertiPaq memory engines, published to workspaces with scheduled refreshes.",
+        etl: [
+          "Oracle DB Views: Configured native DB logic queries.",
+          "Query Folding: Setup Power Query M joins at source levels.",
+          "Date Dimensions: Dynamic Gregorian calendar setups."
+        ],
+        schema: "Star Schema: 1 Claims Fact table (5M+ rows) linked via single directions to Dim_Policies, Dim_Dates, and Dim_Adjusters.",
+        dax: [
+          { name: "Loss Ratio %", formula: "Loss Ratio % = DIVIDE([Total Claims Incurred], [Total Earned Premium], 0)" },
+          { name: "Earned Premium YTD", formula: "Earned Premium YTD = TOTALYTD(SUM(Fact_Claims[EarnedPremiumAmt]), Dim_Dates[Date])" }
+        ],
+        opt: [
+          "Disabled auto date/time flags in PBI, saving 35% memory sizes.",
+          "Refactored complex filters in DAX replacing nested loop commands."
+        ],
+        impact: [
+          "Lowered page render times from 15s to 1.2s.",
+          "Accelerated report close closures from 5 days to real time.",
+          "Underwriters identifiedGeorgia auto policy cost leakages."
+        ],
+        lessons: [
+          "Maintain query folding loops active to limit gateway thresholds.",
+          "Index bridge tables correctly for fast dynamic RLS operations."
+        ]
+      },
+      rpm: {
+        title: "RPM Healthcare Vitals Compliance",
+        industry: "Healthcare",
+        summary: "Designed a HIPAA-compliant Patient Care & Remote Patient Monitoring (RPM) clinical dashboard tracking vitals.",
+        problem: "Non-compliant patient syncing alert flags were scattered across systems, raising clinical oversight risks and billing validation errors.",
+        reqs: [
+          "Integrate IoT patient vital telemetry arrays with EMR directories.",
+          "Highlight patients missing syncs over 48h.",
+          "Ensure secure HIPAA PHI static and dynamic security roles."
+        ],
+        sources: ["JSON REST APIs", "Azure SQL DB", "Excel Medical Bounds"],
+        architecture: "Hybrid direct-query/import model. Telemetry details queried dynamically via Azure database views; patient profiles stored natively.",
+        etl: [
+          "REST Ingestion: Custom M functions parsing paginated JSON streams.",
+          "Unix Conversion: Timezone aware conversions on UTC readings.",
+          "Pivot parameters: Flattened BP, heart, and sugar indicators."
+        ],
+        schema: "Snowflake Schema: Fact_Telemetry linked to Dim_Patients, sharing bridge medical bounds definitions.",
+        dax: [
+          { name: "Non-Compliant Count", formula: "Non-Compliant Patients = CALCULATE(DISTINCTCOUNT(Fact_Telemetry[PatientID]), Dim_Patients[LastSync] < TODAY() - 2)" }
+        ],
+        opt: [
+          "Enabled Incremental Refresh on Telemetry Logs.",
+          "Staged API arrays inside SQL views to avoid gateway time limits."
+        ],
+        impact: [
+          "Doctors contact non-compliant patients under 2 hours.",
+          "Assisted clinical billing operations raising RPM receipts by 18%."
+        ],
+        lessons: [
+          "Staging JSON payloads inside SQL databases guarantees refresh stability."
+        ]
+      },
+      arhaus: {
+        title: "Arhaus Retail Sales Target Mapping",
+        industry: "Retail",
+        summary: "Designed a multi-channel Retail Sales Analysis dashboard for Arhaus Furniture tracking showroom actuals.",
+        problem: "Weekly performance actuals vs quotas were manually compiled from disjoint Excel files, leading to stock holding overheads.",
+        reqs: [
+          "Blend Shopify e-commerce data with POS retail databases.",
+          "Calculate inventory turnover ratios and average order value (AOV).",
+          "Weekly automated manager emails."
+        ],
+        sources: ["Shopify REST API", "POS SQL Server", "Excel budget quotas"],
+        architecture: "Modern data blend in SQL Server views. Power Query handles unpivoting and cleaning of monthly budget spreadsheets.",
+        etl: [
+          "Unpivot: Flattened wide budget sheets containing months columns.",
+          "Addresses normalization: standard regex cleanups on client records.",
+          "Shopify parse: parsed custom colors and fabric details."
+        ],
+        schema: "Star Schema: Fact_Sales and Fact_Inventory sharing conformed store, product, and date dimension catalogs.",
+        dax: [
+          { name: "LFL Sales Growth", formula: "LFL Growth = DIVIDE([Sales] - CALCULATE([Sales], SAMEPERIODLASTYEAR(Dim_Dates)), CALCULATE([Sales]))" }
+        ],
+        opt: [
+          "Dax Studio verified: replaced calculated columns with optimized measures.",
+          "Removed redundant high-precision product details keys."
+        ],
+        impact: [
+          "Reduced warehouse stockouts by 15%.",
+          "Managers view sales comparisons in 1-click, cutting 6 hours of spreadsheet preparation."
+        ],
+        lessons: [
+          "Blending targets with daily facts requires correct allocation mappings."
+        ]
+      }
+    };
+
+    // Modal Control Functions
+    function openModal(projectKey) {
+      const data = caseStudiesData[projectKey];
+      if (!data) return;
+
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-industry').textContent = data.industry;
+      document.getElementById('modal-summary').textContent = data.summary;
+      document.getElementById('modal-problem').textContent = data.problem;
+      document.getElementById('modal-architecture').textContent = data.architecture;
+      document.getElementById('modal-schema').textContent = data.schema;
+
+      // Fill Requirements
+      const reqsList = document.getElementById('modal-reqs');
+      reqsList.innerHTML = '';
+      data.reqs.forEach(r => {
+        const li = document.createElement('li');
+        li.textContent = r;
+        reqsList.appendChild(li);
+      });
+
+      // Fill Sources
+      const sourcesDiv = document.getElementById('modal-sources');
+      sourcesDiv.innerHTML = '';
+      data.sources.forEach(s => {
+        const span = document.createElement('span');
+        span.className = 'text-[9.5px] px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-300 font-bold';
+        span.textContent = s;
+        sourcesDiv.appendChild(span);
+      });
+
+      // Fill ETL Steps
+      const etlDiv = document.getElementById('modal-etl-steps');
+      etlDiv.innerHTML = '';
+      data.etl.forEach((step, i) => {
+        const item = document.createElement('div');
+        item.className = 'p-3 bg-zinc-900/40 rounded-xl border border-zinc-850 flex gap-3';
+        item.innerHTML = `<span class="text-primary font-bold">${i+1}</span><p>${step}</p>`;
+        etlDiv.appendChild(item);
+      });
+
+      // Fill DAX
+      const daxDiv = document.getElementById('modal-dax-measures');
+      daxDiv.innerHTML = '';
+      data.dax.forEach(m => {
+        const wrap = document.createElement('div');
+        wrap.className = 'p-4 bg-zinc-900/50 rounded-xl border border-zinc-800 space-y-2';
+        wrap.innerHTML = `
+          <div class="font-bold text-foreground">${m.name}</div>
+          <pre class="font-mono text-[10px] bg-zinc-950 p-3 rounded-lg border border-zinc-850 overflow-x-auto text-zinc-200">${m.formula}</pre>
+        `;
+        daxDiv.appendChild(wrap);
+      });
+
+      // Fill Impact
+      const impList = document.getElementById('modal-impact');
+      impList.innerHTML = '';
+      data.impact.forEach(i => {
+        const li = document.createElement('li');
+        li.textContent = i;
+        impList.appendChild(li);
+      });
+
+      // Fill Opt
+      const optList = document.getElementById('modal-opt');
+      optList.innerHTML = '';
+      data.opt.forEach(o => {
+        const li = document.createElement('li');
+        li.textContent = o;
+        optList.appendChild(li);
+      });
+
+      // Fill Lessons
+      const lessonsList = document.getElementById('modal-lessons');
+      lessonsList.innerHTML = '';
+      data.lessons.forEach(l => {
+        const li = document.createElement('li');
+        li.textContent = l;
+        lessonsList.appendChild(li);
+      });
+
+      document.getElementById('project-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('project-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>
