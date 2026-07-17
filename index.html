@@ -462,10 +462,16 @@
             <div class="carousel-container relative w-full h-[200px] rounded-xl overflow-hidden mb-4 group/carousel select-none">
               <div class="carousel-slides relative w-full h-full">
                 <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-                  <img src="assets/images/oracleMcpSlide0.png" alt="AI-Powered Oracle Database Connector Architecture" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/oracleMcpSlide0.png'], 0)">
+                  <img src="assets/images/oracleMcpSlide0.png" alt="AI-Powered Oracle Database Connector Architecture" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/oracleMcpSlide0.png', 'assets/images/oracleMcpSlide1.png'], 0)">
+                </div>
+                <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
+                  <img src="assets/images/oracleMcpSlide1.png" alt="From request to live database view" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/oracleMcpSlide0.png', 'assets/images/oracleMcpSlide1.png'], 1)">
                 </div>
               </div>
+              <button class="carousel-arrow-left absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80 z-10 flex items-center justify-center font-bold text-sm select-none">&lsaquo;</button>
+              <button class="carousel-arrow-right absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80 z-10 flex items-center justify-center font-bold text-sm select-none">&rsaquo;</button>
               <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
                 <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
               </div>
             </div>
