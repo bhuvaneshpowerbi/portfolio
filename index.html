@@ -456,44 +456,34 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Project 1: Insurance (violet) -->
+        <!-- Project 1: AI / Data Engineering (violet) -->
         <div class="p-6 rounded-2xl glass border border-zinc-200/40 dark:border-zinc-800/40 flex flex-col justify-between hover:border-violet/40 transition-all group">
           <div>
             <div class="carousel-container relative w-full h-[200px] rounded-xl overflow-hidden mb-4 group/carousel select-none">
               <div class="carousel-slides relative w-full h-full">
                 <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-                  <img src="assets/images/mercury-slide1.png" alt="Sales Overview" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/mercury-slide1.png', 'assets/images/mercury-slide2.png', 'assets/images/mercury-slide3.png'], 0)">
-                </div>
-                <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-                  <img src="assets/images/mercury-slide2.png" alt="Claims Lifecycle" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/mercury-slide1.png', 'assets/images/mercury-slide2.png', 'assets/images/mercury-slide3.png'], 1)">
-                </div>
-                <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-                  <img src="assets/images/mercury-slide3.png" alt="Underwriting Performance" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/mercury-slide1.png', 'assets/images/mercury-slide2.png', 'assets/images/mercury-slide3.png'], 2)">
+                  <img src="assets/images/oracleMcpSlide0.png" alt="AI-Powered Oracle Database Connector Architecture" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/oracleMcpSlide0.png'], 0)">
                 </div>
               </div>
-              <button class="carousel-arrow-left absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80 z-10 flex items-center justify-center font-bold text-sm select-none">&lsaquo;</button>
-              <button class="carousel-arrow-right absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80 z-10 flex items-center justify-center font-bold text-sm select-none">&rsaquo;</button>
               <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
-                <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
                 <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
               </div>
             </div>
 
             <div class="flex justify-between text-[10px] font-mono mb-4">
-              <span class="px-2 py-0.5 rounded bg-violet/10 text-violet font-bold">INSURANCE</span>
-              <span class="text-zinc-500 dark:text-zinc-400">12 MONTHS</span>
+              <span class="px-2 py-0.5 rounded bg-violet/10 text-violet font-bold">AI ENGINEERING</span>
+              <span class="text-zinc-500 dark:text-zinc-400">Personal Project</span>
             </div>
-            <h4 class="text-lg font-bold mb-2 group-hover:text-violet transition-colors text-zinc-900 dark:text-zinc-100">Mercury General Claims</h4>
-            <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">Designed auto underwriting dashboard system tracking loss ratios, claim lifecycles, and regional performance matrices.</p>
+            <h4 class="text-lg font-bold mb-2 group-hover:text-violet transition-colors text-zinc-900 dark:text-zinc-100">AI-Powered Oracle Database Connector</h4>
+            <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">Built a Model Context Protocol (MCP) server enabling Claude Desktop to query, analyze, and manage an Oracle database using natural language — from schema discovery to DDL generation.</p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Oracle SQL</span>
-              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Power Query</span>
-              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Dynamic RLS</span>
+              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Python</span>
+              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">MCP Protocol</span>
+              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Oracle SQL/PL-SQL</span>
             </div>
           </div>
           <div class="flex gap-3">
-            <button onclick="openModal('mercury')" class="w-full py-2.5 rounded-xl bg-violet text-white text-xs font-bold hover:opacity-90 transition-opacity">Explore Case Study</button>
+            <button onclick="openModal('oraclemcp')" class="w-full py-2.5 rounded-xl bg-violet text-white text-xs font-bold hover:opacity-90 transition-opacity">Explore Case Study</button>
           </div>
         </div>
 
@@ -503,34 +493,24 @@
             <div class="carousel-container relative w-full h-[200px] rounded-xl overflow-hidden mb-4 group/carousel select-none">
               <div class="carousel-slides relative w-full h-full">
                 <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-                  <img src="assets/images/rpm-slide1.png" alt="Clinical Vitals" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/rpm-slide1.png', 'assets/images/rpm-slide2.png', 'assets/images/rpm-slide3.png'], 0)">
-                </div>
-                <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-                  <img src="assets/images/rpm-slide2.png" alt="Patient Compliance" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/rpm-slide1.png', 'assets/images/rpm-slide2.png', 'assets/images/rpm-slide3.png'], 1)">
-                </div>
-                <div class="carousel-slide absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-                  <img src="assets/images/rpm-slide3.png" alt="Alert Ingest Pipeline" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/rpm-slide1.png', 'assets/images/rpm-slide2.png', 'assets/images/rpm-slide3.png'], 2)">
+                  <img src="assets/images/rpm-slide1.png" alt="RPM Healthcare Performance Analytics" class="w-full h-full object-cover cursor-zoom-in" onclick="openImageLightbox(['assets/images/rpm-slide1.png'], 0)">
                 </div>
               </div>
-              <button class="carousel-arrow-left absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80 z-10 flex items-center justify-center font-bold text-sm select-none">&lsaquo;</button>
-              <button class="carousel-arrow-right absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/60 text-white opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-200 hover:bg-black/80 z-10 flex items-center justify-center font-bold text-sm select-none">&rsaquo;</button>
               <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
-                <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
                 <span class="carousel-dot w-1.5 h-1.5 rounded-full bg-white/40 cursor-pointer transition-colors"></span>
               </div>
             </div>
 
             <div class="flex justify-between text-[10px] font-mono mb-4">
               <span class="px-2 py-0.5 rounded bg-emerald/10 text-emerald font-bold">HEALTHCARE</span>
-              <span class="text-zinc-500 dark:text-zinc-400">10 MONTHS</span>
+              <span class="text-zinc-500 dark:text-zinc-400">JAN 2024 – JUN 2025</span>
             </div>
-            <h4 class="text-lg font-bold mb-2 group-hover:text-emerald transition-colors text-zinc-900 dark:text-zinc-100">RPM Clinical Vitals</h4>
-            <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">HIPAA compliant patient telemetry tracking dashboard integrating EMR registries and device alert monitoring logs.</p>
+            <h4 class="text-lg font-bold mb-2 group-hover:text-emerald transition-colors text-zinc-900 dark:text-zinc-100">RPM Healthcare Performance Analytics</h4>
+            <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">Interactive Power BI analytics dashboard giving stakeholders a comprehensive, automated view of patient outcomes, treatment efficiency, and hospital resource utilization.</p>
             <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Web API JSON</span>
-              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Azure SQL</span>
-              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Incremental Refresh</span>
+              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Power BI</span>
+              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">Oracle SQL</span>
+              <span class="text-[9px] font-mono border border-zinc-200 dark:border-zinc-800 px-2 py-0.5 rounded bg-zinc-100/40 dark:bg-zinc-800/40">ETL Pipelines</span>
             </div>
           </div>
           <div class="flex gap-3">
@@ -587,7 +567,7 @@
             </div>
           </div>
           <div class="flex gap-3">
-            <button onclick="openVideoLightbox('https://drive.google.com/file/d/1fGfXe6tc1DgCakfa2sau9e_wMBwjGk4h/preview', 'marutinewPoster.png')" class="flex-1 py-2.5 rounded-xl border border-amber bg-transparent text-amber text-xs font-bold hover:bg-amber/10 transition-all flex items-center justify-center gap-1.5 select-none">▶ Watch Demo</button>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNjk5NWY0ZjYtYWRmMi00NjcwLTk2MDEtZTE1MDk4NGQ5MmI3IiwidCI6IjE2MzUwNzE4LTQ5N2ItNGJiNC04MmQ5LTE4ZGE2N2E4ZDRhOSJ9" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 rounded-xl border border-amber bg-transparent text-amber text-xs font-bold hover:bg-amber/10 transition-all flex items-center justify-center gap-1.5 select-none">⧉ Live Report</a>
             <button onclick="openModal('maruti')" class="flex-1 py-2.5 rounded-xl bg-amber text-white text-xs font-bold hover:opacity-90 transition-opacity">Explore Case Study</button>
           </div>
         </div>
@@ -1070,74 +1050,80 @@ AVERAGEX(
     }
 
     const caseStudiesData = {
-      mercury: {
-        title: "Mercury General Claims Analytics",
-        industry: "Insurance",
-        summary: "Developed a comprehensive enterprise Claims & Underwriting Intelligence dashboard system tracking loss ratios, claim lifecycles, and policy performance across 10+ states.",
-        problem: "Sluggish queries hitting legacy transactional Oracle servers took monthly report closes up to 5 days, resulting in lag values for underwriting executives.",
+      oraclemcp: {
+        title: "AI-Powered Oracle Database Connector",
+        industry: "AI Engineering",
+        summary: "Built a Model Context Protocol (MCP) server that gives Claude Desktop direct, natural-language access to an Oracle database — from schema discovery to query execution to DDL generation — turning plain-English requests into governed, reusable database objects.",
+        problem: "Business users and analysts had to route every ad-hoc data request through a developer to write SQL, describe schemas, or build reporting views — creating bottlenecks for simple lookups and one-off aggregations.",
         reqs: [
-          "Consolidate underwriting and policy log streams.",
-          "Perform Loss Ratio and YTD Earned Premium aggregations on the fly.",
-          "Dynamic state geographical drills.",
-          "Secure policyholder data using dynamic RLS roles."
+          "Expose Oracle schema, tables, and procedures to an AI client via a standard protocol.",
+          "Support both read-only exploration and controlled write/DDL operations.",
+          "Keep credentials and connection handling out of the AI context entirely.",
+          "Let the AI generate reusable database objects (views), not just one-off answers."
         ],
-        sources: ["Oracle SQL DB", "SharePoint Adjuster Lists", "Adjustments CSV"],
-        architecture: "Data loaded from Oracle SQL views, transformed in Power Query enforcing strict folding, pushed to VertiPaq memory engines, published to workspaces with scheduled refreshes.",
+        sources: ["Oracle Database (Tables, Views, Procedures)"],
+        architecture: "Claude Desktop sends natural-language requests over an MCP call to a Python-based Oracle MCP Server. The server uses python-oracledb in thick mode with connection pooling and read/write permission guards, then issues SQL/PL-SQL directly against the Oracle Database (tables, views, procedures, and DDL execution).",
         etl: [
-          "Oracle DB Views: Configured native DB logic queries.",
-          "Query Folding: Setup Power Query M joins at source levels.",
-          "Date Dimensions: Dynamic Gregorian calendar setups."
+          "MCP Tool Layer: Exposed list_tables, describe_table, run_query, execute_statement, execute_ddl, and list_procs as callable tools.",
+          "Connection Management: Pooled python-oracledb (thick mode) connections to avoid per-request overhead.",
+          "Permission Guards: Independent toggles separating read (SELECT), write (INSERT/UPDATE/DELETE), and DDL (CREATE/ALTER/DROP) access."
         ],
-        schema: "Star Schema: 1 Claims Fact table (5M+ rows) linked via single directions to Dim_Policies, Dim_Dates, and Dim_Adjusters.",
+        schema: "No fixed schema — the server dynamically introspects whatever schema, tables, views, and procedures exist in the connected Oracle database at request time.",
         dax: [
-          { name: "Loss Ratio %", formula: "Loss Ratio % = DIVIDE([Total Claims Incurred], [Total Earned Premium], 0)" },
-          { name: "Earned Premium YTD", formula: "Earned Premium YTD = TOTALYTD(SUM(Fact_Claims[EarnedPremiumAmt]), Dim_Dates[Date])" }
+          { name: "list_tables — Schema discovery", formula: "Tool: list_tables\nReturns all tables/views visible to the connected Oracle user for the AI to reason about available data." },
+          { name: "run_query — Capped SELECT execution", formula: "Tool: run_query\nExecutes a SELECT statement with a hard row cap to prevent runaway result sets from natural-language requests." },
+          { name: "execute_ddl — Generated view example", formula: "-- Generated from: \"Build a department salary summary report\"\nCREATE VIEW dept_salary_summary AS\nSELECT department,\n       COUNT(*)        AS headcount,\n       AVG(salary)      AS avg_salary,\n       MIN(salary)       AS min_salary,\n       MAX(salary)      AS max_salary,\n       SUM(salary)       AS total_payroll_cost\nFROM employees\nGROUP BY department;" }
         ],
         opt: [
-          "Disabled auto date/time flags in PBI, saving 35% memory sizes.",
-          "Refactored complex filters in DAX replacing nested loop commands."
+          "Connection pooling to reduce per-call Oracle connection overhead.",
+          "Row-capped run_query tool to bound result size on ad-hoc SELECTs.",
+          "Query results returned as generated, reusable SQL VIEWS instead of one-off text answers where appropriate."
         ],
         impact: [
-          "Lowered page render times from 15s to 1.2s.",
-          "Accelerated report close closures from 5 days to real time.",
-          "Underwriters identified Georgia auto policy cost leakages."
+          "Converted a natural-language request ('Build a department salary summary report') directly into a permanent, reusable SQL VIEW (dept_salary_summary).",
+          "Removed the need for a developer intermediary on routine schema exploration and reporting requests.",
+          "Read and write/DDL access can be toggled independently per environment, keeping production safer by default."
         ],
         lessons: [
-          "Maintain query folding loops active to limit gateway thresholds.",
-          "Index bridge tables correctly for fast dynamic RLS operations."
+          "Environment-based credentials (never hardcoded) are essential when an AI agent has DB access.",
+          "Separating read, write, and DDL permissions independently gives much finer safety control than a single on/off switch.",
+          "Generating durable database objects (views) instead of throwaway answers makes AI-assisted analysis reusable by the whole team."
         ]
       },
       rpm: {
-        title: "RPM Healthcare Vitals Compliance",
+        title: "RPM — Healthcare Performance Analytics",
         industry: "Healthcare",
-        summary: "Designed a HIPAA-compliant Patient Care & Remote Patient Monitoring (RPM) clinical dashboard tracking vitals.",
-        problem: "Non-compliant patient syncing alert flags were scattered across systems, raising clinical oversight risks and billing validation errors.",
+        summary: "Developed an interactive Power BI analytics dashboard (Jan 2024 – Jun 2025) giving hospital stakeholders a comprehensive, automated view of patient outcomes, treatment efficiency, and critical operational KPIs.",
+        problem: "Stakeholders needed a comprehensive, accurate view of health-related metrics to support data-driven clinical decision-making — without manual reporting overhead.",
         reqs: [
-          "Integrate IoT patient vital telemetry arrays with EMR directories.",
-          "Highlight patients missing syncs over 48h.",
-          "Ensure secure HIPAA PHI static and dynamic security roles."
+          "Give stakeholders a comprehensive view of health-related metrics in one dashboard.",
+          "Visualize patient outcomes, treatment efficiency, and critical operational KPIs.",
+          "Integrate complex healthcare datasets from Oracle SQL into a centralized reporting solution.",
+          "Automate refresh and reporting to eliminate manual reporting overhead."
         ],
-        sources: ["JSON REST APIs", "Azure SQL DB", "Excel Medical Bounds"],
-        architecture: "Hybrid direct-query/import model. Telemetry details queried dynamically via Azure database views; patient profiles stored natively.",
+        sources: ["Oracle SQL Database", "Hospital Resource & Staffing Records"],
+        architecture: "Power BI dashboards connected to a centralized Oracle SQL reporting layer, with complex healthcare datasets integrated and modeled for accurate, automated analytics and fully automated refresh & ETL via optimized pipelines.",
         etl: [
-          "REST Ingestion: Custom M functions parsing paginated JSON streams.",
-          "Unix Conversion: Timezone aware conversions on UTC readings.",
-          "Pivot parameters: Flattened BP, heart, and sugar indicators."
+          "Data Integration: Consolidated complex healthcare datasets from Oracle SQL into a single centralized reporting model.",
+          "Pipeline Automation: Built and optimized ETL pipelines to fully automate data refresh, removing manual reporting steps.",
+          "KPI Modeling: Structured data to support patient outcomes, treatment efficiency, and resource-utilization (beds, staff, theatres, imaging) tracking."
         ],
-        schema: "Snowflake Schema: Fact_Telemetry linked to Dim_Patients, sharing bridge medical bounds definitions.",
+        schema: "Centralized reporting model built on Oracle SQL source tables, structured around patient outcomes, treatment efficiency, and hospital resource-utilization dimensions.",
         dax: [
-          { name: "Non-Compliant Count", formula: "Non-Compliant Patients = CALCULATE(DISTINCTCOUNT(Fact_Telemetry[PatientID]), Dim_Patients[LastSync] < TODAY() - 2)" }
+          { name: "Custom DAX Measures & Visuals", formula: "Created custom DAX measures and visuals highlighting trends in healthcare performance and hospital resource utilization (patient outcomes, treatment efficiency, and operational KPIs)." }
         ],
         opt: [
-          "Enabled Incremental Refresh on Telemetry Logs.",
-          "Staged API arrays inside SQL views to avoid gateway time limits."
+          "Automated refresh & ETL via optimized pipelines — 100% automated.",
+          "Centralized Oracle SQL reporting model to remove manual data consolidation."
         ],
         impact: [
-          "Doctors contact non-compliant patients under 2 hours.",
-          "Assisted clinical billing operations raising RPM receipts by 18%."
+          "Reduced manual reporting time by 35%.",
+          "Achieved 100% automated refresh & ETL via optimized pipelines.",
+          "Gave stakeholders a single, trending view of patient outcomes and operational KPIs for faster clinical decision-making."
         ],
         lessons: [
-          "Staging JSON payloads inside SQL databases guarantees refresh stability."
+          "Centralizing Oracle SQL data into one reporting model was key to eliminating manual reporting overhead.",
+          "Automated ETL pipelines made refreshes reliable enough for stakeholders to trust the dashboard for decision-making."
         ]
       },
       maruti: {
